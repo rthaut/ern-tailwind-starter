@@ -1,0 +1,26 @@
+{
+  "name": "ern-tailwind-starter",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Ryan Thaut <rthaut@gmail.com> (http://ryanthaut.com)",
+  "homepage": "https://github.com/rthaut/ern-tailwind-starter#readme",
+  "license": "GPL-3.0-or-later",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rthaut/ern-tailwind-starter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rthaut/ern-tailwind-starter/issues"
+  },
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "node server.js",
+    "client": "node start-client.js",
+    "lint": "eslint ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "concurrently": "^4.1.0"
+  }
+}

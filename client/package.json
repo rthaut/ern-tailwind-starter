@@ -1,0 +1,45 @@
+{
+  "name": "ern-tailwind-starter-client",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Ryan Thaut <rthaut@gmail.com> (http://ryanthaut.com)",
+  "homepage": "https://github.com/rthaut/ern-tailwind-starter#readme",
+  "license": "GPL-3.0-or-later",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rthaut/ern-tailwind-starter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rthaut/ern-tailwind-starter/issues"
+  },
+  "scripts": {
+    "build": "npm-run-all tailwind:build react:build",
+    "start": "npm-run-all tailwind:build --parallel react:start tailwind:watch",
+    "tailwind:build": "tailwind build src/App.src.css -c tailwind.js -o src/App.css",
+    "tailwind:watch": "chokidar \"src/App.src.css\" -c \"npm run tailwind:build\"",
+    "react:build": "react-scripts build",
+    "react:start": "react-scripts start",
+    "react:test": "react-scripts test",
+    "react:eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "dependencies": {
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "react-scripts": "2.1.5",
+    "tailwindcss": "^0.7.4"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^1.2.2",
+    "npm-run-all": "^4.1.5"
+  }
+}
